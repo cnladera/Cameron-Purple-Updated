@@ -38,8 +38,8 @@ public class PlayerControls : MonoBehaviour
     //collider with a trigger
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Game is at a stopping state
-        Time.timeScale = 0;
+        //game over function is called from the game manager
+        GameObject.Find("GameController").GetComponent<GameController>().GameOver();
     }
 
 }
